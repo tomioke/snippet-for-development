@@ -1,0 +1,124 @@
+Buat snippet untuk Program PHP Visual Studio Code
+
+- Buat file baru dengan Ctrl+Shift+P ketikkan snippet, buat dengan pilih yang Global new snippet
+- Masukkan berbagai script :
+
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+		"Create new PHP Multiline": {
+		"prefix": "phpmulti",
+		"body": [
+			"<?php",
+			"\t${1}",
+			"?>"
+		],
+		"description": "Create first php tag"
+	},
+
+	"Create new PHP Singleline": {
+		"prefix": "phpsingle",
+		"body": [
+			"<?php ${1} ?>"
+		],
+		"description": "Create php single tag"
+	},
+
+	"PHP code with Echo": {
+		"prefix": "phpecho",
+		"body": [
+			"<?php echo ${1:typehere}; ?>"
+		],
+		"description": "Print php with single line"
+	},
+
+	"PHP code with Require": {
+		"prefix": "phpreq",
+		"body": [
+			"require '${1:typehere}'; ?>"
+		],
+		"description": "Print php with single line"
+	},
+
+	"PHP Post Request": {
+		"prefix": "post",
+		"body": [
+			"$${1:_POST}['${2:typehere}']" 
+		],
+		"description": "type post in php"
+	},
+
+	"PHP Get Request": {
+		"prefix": "get",
+		"body": [
+			"mysqli_query()" 
+		],
+		"description": "type mysqli query"
+	},
+
+	"Mysqli query": {
+		"prefix": "mquery",
+		"body": [
+			"mysqli_query($${1:connect}, \"${2:query_here}\");" 
+		],
+		"description": "mysqli query"
+	},
+
+	"Mysqli num rows": {
+		"prefix": "mnumrows",
+		"body": [
+			"mysqli_num_rows($${1:query});" 
+		],
+		"description": "mysqli num rows"
+	},
+
+	"Mysqli fetch array": {
+		"prefix": "mfetcharray",
+		"body": [
+			"mysqli_fetch_array($${1:query});" 
+		],
+		"description": "mysqli fetch array"
+	},
+
+	"Mysqli default error connection": {
+		"prefix": "merror",
+		"body": [
+			"mysqli_error($${1:connect});" 
+		],
+		"description": "mysqli error"
+	},
+
+	"Php revert": {
+		"prefix": "phprevert",
+		"body": [
+			"?>",
+			"\t${1}", 
+			"<?php"
+		],
+		"description": "php revert "
+	},
+
+	"Php variable": {
+		"prefix": "phpvar",
+		"body": [
+			"$${1:data}['${2:type_here}']"
+		],
+		"description": "php variable "
+	},
+}
+
+- Penjelasan setiap baris
